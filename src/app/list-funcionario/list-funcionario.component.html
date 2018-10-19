@@ -1,0 +1,27 @@
+<div class="col-md-6">
+    <h2>Listar Funcionários</h2>
+    <button class="btn btn-danger" (click)="addFuncionario()">Novo</button>
+    <table class="table table-striped">
+      <thead style="background-color: crimson; color: cornsilk;">
+      <tr>
+        <th style="display: none;">Id</th>
+        <th>Nome</th>
+        <th>Função</th>
+        <th>Empresa</th>
+        <th>Ações</th>
+      </tr>
+      </thead>
+      <tbody> 
+      <tr *ngFor="let func of funcionarios">
+        <td style="display: none;">{{func.id}}</td>
+        <td>{{func.nome}}</td>
+        <td>{{func.funcao}}</td>
+        <td>{{func.empresa}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteFuncionario(user)">Excluir</button>
+          <button class="btn btn-danger" (click)="editFuncionario(user)" style="margin-left: 20px;">Editar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

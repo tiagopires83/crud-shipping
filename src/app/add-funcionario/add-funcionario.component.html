@@ -1,0 +1,20 @@
+<h2 style="margin-left: 100px;">Adicionar Funcionário</h2>
+<hr><br>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div id="formFunc" style="margin-left: 100px;  width: 1150px;">
+    
+    <div class="form-group" style="bottom: 10px;background-color: crimson;color: cornsilk; height: 60px;">
+      <br>
+      <label for="nome">Nome </label>
+      <input type="text" id="nome" name="nome" formControlName="nome" style="width: 500px;" []> 
+
+      <label for="funcao" style="margin-left: 10px;">Função </label>
+      <input type="text" id="funcao" name="funcao" formControlName="funcao">
+
+      <label for="empresa" style="margin-left: 10px;">Empresa </label>
+      <input type="text" id="empresa" name="empresa" formControlName="empresa"> 
+
+      <button class="btn btn-success" style="margin-left: 10px;">Adicionar</button>
+    </div>      
+  </div>
+</form>
