@@ -18,6 +18,7 @@ export class ListFuncionarioComponent implements OnInit {
 
   ngOnInit() {
     this.funcionarios = this.funcionarioService.getFuncionarios();
+    console.log(this.funcionarios);
   }
 
   deleteFuncionario(funcionario: Funcionario): void {
@@ -25,12 +26,12 @@ export class ListFuncionarioComponent implements OnInit {
   };
 
   editFuncionario(funcionario: Funcionario): void {
-    localStorage.removeItem("editFuncionarioId");
-    localStorage.setItem("editFuncionarioId", funcionario.id.toString());
-    this.router.navigate(['editFuncionario']);
+    
+    
+    //this.router.navigate(['editFuncionario']);
   };
 
-  addFuncionario(): void {
+  novoFuncionario(): void {
     this.router.navigate(['addFuncionario']);
   };
 

@@ -8,18 +8,11 @@ export class FuncionarioService {
 
   private mockFuncs: Funcionario[]; 
   private funcionario:Funcionario = new Funcionario(); 
+  private auxFuncionario:Funcionario = new Funcionario();
 
   constructor() { }
 
   getFuncionarios(){
-
-    //this.funcionario = new Funcionario();
-    //this.funcionario.id = 1;
-    //this.funcionario.nome = 'blaaa';
-    //this.funcionario.funcao = 'sdfhsf';
-    //this.funcionario.empresa = 'sdfasf';
-
-    //this.mockFuncs.push(this.funcionario)
 
     this.mockFuncs = [
       {id: 1, nome: 'João da Silva', funcao: 'Engenheiro', empresa : 'TKS Engenharia' },
@@ -34,10 +27,13 @@ export class FuncionarioService {
   }
 
   addFuncionario(funcionario: Funcionario){
+    this.auxFuncionario = this.mockFuncs[this.mockFuncs.length -1];
+    funcionario.id = this.auxFuncionario.id + 1;
     this.mockFuncs.push(funcionario);
   }
 
   deleteFuncionario(funcionario: Funcionario){
+    //const index = this.mockFuncs.indexOf(funcionario);
     this.mockFuncs.splice(this.mockFuncs.indexOf(funcionario), 1);
   }
 

@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Embarque e Desembarque de Funcionários';
-  sub_addFuncionario = 'Funcionários';
+  sub_addFuncionario = 'Manter Funcionário';
   sub_manterEmbarque = 'Manter Embarque';
 }

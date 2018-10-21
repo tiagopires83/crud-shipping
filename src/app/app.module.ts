@@ -8,6 +8,8 @@ import { EditFuncionarioComponent } from './edit-funcionario/edit-funcionario.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+
+
 const appRoutes: Routes = [
   {path: 'addFuncionario', component: AddFuncionarioComponent},
   {path: 'listFuncionario', component: ListFuncionarioComponent},

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
 import { Router } from '@angular/router';
 import { FuncionarioService } from '../funcionario.service';
+import {first} from "rxjs/operators";
 
 @Component({
   selector: 'app-add-funcionario',
@@ -17,7 +18,7 @@ export class AddFuncionarioComponent implements OnInit {
   ngOnInit() {
     this.addForm = this.formBuilder.group(
       {
-        id : [],
+        id : [], 
         nome : ['',Validators.required],
         funcao : ['', Validators.required],
         empresa : ['', Validators.required]
@@ -29,7 +30,7 @@ export class AddFuncionarioComponent implements OnInit {
   onSubmit(){
     
     this.funcionarioService.addFuncionario(this.addForm.value);
-    this.router.navigate(['listFuncionario']);
+    this.router.navigate(['addFuncionario']);
     
   }
 
